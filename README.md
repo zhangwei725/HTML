@@ -59,6 +59,9 @@
 ## 五、全栈技能点
 
 1. 前端技能：HTML、JavaScript、CSS、HTML5
-2. 一门后端语言：Java、PHP
+2. 后端语言：Java、PHP
 3. 移动端开发：Android、iOS
 4. 其他技能：数据库、HTTP、Python等
+
+
+
