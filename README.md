@@ -58,11 +58,5 @@
 
 
 
-传统前端技能：HTML、JavaScript、CSS
-
-* 一门后端语言
-* 移动端开发：iOS / Android / HTML5
-* 其他技能：数据库、HTTP 等等
-
 
 
