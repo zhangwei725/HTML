@@ -1,0 +1,156 @@
+# 表格标签
+
+## 一、作用
+
+​	以表格形式将数据显示出来，当数据量非常大的时候，表格这种展现形式被认为是最为清晰的一种展现形式。
+
+## 二 、格式
+
+1. table定义表格
+
+2. tr定义行
+
+3. td定义单元格
+
+   ```
+   <table width=* height=* bgcolor=* border=* bordercolor=* cellspacing=* cellpadding=*>
+   	<body>
+   		<tr>
+   			<td>
+   				此处加入内容
+   			</td>
+   		</tr>
+   	</body>
+   </table>
+   ```
+
+## 三、常用属性
+
+1. border： 默认情况下表格的边框宽度为0看不到, 通过border属性给表格指定边框宽度
+
+2. width：默认情况下表格的宽度是由内容自动计算出来的, 可以通过width属性指定表格的宽度
+
+3. cellspacing：外边距. 默认情况下单元格之间有2个像素的间隙, 可以通过cellpadding指定表格之间的间隙
+
+4. cellpadding：内边距. 默认情况下单元格边缘距离内容有1个像素的内边距, 可以通过cellpadding属性指定单元格边缘和内容之间的内边距
+
+5. align：
+
+   - 作用: 规定表格相对周围元素的对齐方式, 它的取值有center、left、right
+   - 例如：
+     - 给table设置align属性, 是让表格在浏览器中居左/居右/居中
+     - 给tr设置align属性, 是让当前行中所有内容居左/居右/居中
+     - 给td设置align属性,是让当前单元格中所有内容居左/居右/居中
+     - 该属性仅仅作为了解, 企业开发中用css代替, 因为HTML仅仅用于说明语义
+     - 如果td中设置了align属性, tr中也设置了align属性, 那么单元格中的内容会按照td中设置的来对齐
+
+6. bgcolor：
+
+   - 作用：规定表格的背景颜色
+   - 例如：
+     - 给table设置bgcolor属性, 是给整个表格设置背景颜色
+     - 给tr设置bgcolor属性, 是给当前行设置背景颜色
+     - 给td设置bgcolor属性, 是给当前单元格设置背景颜色
+     - 该属性仅仅作为了解, 企业开发中用css代替, 因为HTML仅仅用于说明语义
+
+7. valign：
+
+   - 作用：规定表格相对周围元素的对齐方式, 它的取值有center、left、right
+   - 例如：
+     - 给table设置valign属性, 无效
+     - 给tr设置valign属性, 是让当前行中所有内容居上/居中/居下
+     - 给td设置valign属性,是让当前单元格中所有内容居上/居中/居下
+     - 如果td中设置了valign属性, tr中也设置了valign属性, 那么单元格中的内容会按照td中设置的来对齐
+
+8. 其他：
+
+   - 表单中有两种类型的单元格，一种是标准单元格td，一种是表头单元格th
+
+   - th标签：给每一列设置标题，单元格中的内容会自动加粗、居中
+
+   - caption标签：给整个表格设置标题一定要嵌套在talbe标签内部才有效
+
+   - 例如：
+
+     ```html
+     <table bgcolor="black" cellspacing="1px" width="800px" align="center">
+         <caption>
+             <h2>今日小说排行榜</h2>
+         </caption>
+         <tr bgcolor="#a9a9a9">
+             <th>排名</th>
+             <th>关键词</th>
+             <th>趋势</th>
+             <th>今日搜索</th>
+             <th>最近七日</th>
+             <th>相关链接</th>
+         </tr>
+         <tr bgcolor="white" align="center">
+             <td>1</td>
+             <td align="left">暴走大事件</td>
+             <td>
+                 <img src="images/up.jpg">
+             </td>
+             <td>623557</td>
+             <td>4088311</td>
+             <td>
+                 <a href="#">贴吧</a>
+                 <a href="#">图片</a>
+                 <a href="#">百科</a>
+             </td>
+         </tr>
+     </table>
+     ```
+
+## 四、表格的复杂应用
+
+#### 4.1、表格的结构
+
+1. thead标签:用来存放当前列的表头，如果没有加css页面默认将表头中的高度设置变小
+
+2. tbody标签:一般用来存放页面中的主体数据，如果不写会自动加上
+
+3. tfoot标签:用来存放表格的页脚（脚注或表注)，如果没有加css页面默认将表头中的高度设置变小，一般不会出现
+
+4. 示例代码
+
+   ```html
+   <table>
+       <caption>表格的标题</caption>
+       <thead>
+           <tr>
+               <th>每一列的标题</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td>数据</td>
+           </tr>
+       </tbody>
+       <tfoot>
+           <tr>
+               <td>数据</td>
+           </tr>
+       </tfoot>
+   </table>
+   ```
+
+> 注意：
+>
+> 1. 表格结构的意义主要是用于SEO(Search Engine Optimization), 便于搜索引擎优化指定哪部分的内容是需要抓取的重要内容，一般情况下搜索引擎会优先抓取tbody中的内容。
+> 2. 由于有一部分浏览器对table的这种结构支持不是很好，所以在企业开发中一般都不用严格的按照这种结构来编写
+
+#### 4.2、合并单元格
+
+1. 横向合并
+   - colspan：合并当前行的哪几个单元格，注意colspan只会向后合并，不会向前合并。
+   - 例如：<td colspan="2"></td>
+   - 说明：把当前单元格当做两个单元格来看待
+2. 纵向合并
+   - rowspan:合并当前列的哪几个单元格，注意rowspan只会向后合并，不会向前合并。
+   - 例如：<td rowspan="2"></td>
+   - 说明：把当前单元格当做两个单元格来看待
+
+*支付宝截图*
+
+![](http://ojx4zwltq.bkt.clouddn.com/17-6-13/71095423.jpg)
