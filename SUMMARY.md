@@ -11,5 +11,5 @@
   * [六、HTML 表单](di-er-zhang/liu-3001-html-biao-dan.md)
 * [第三章](di-san-zhang.md)
   * [七、综合练习一](di-san-zhang/qi-3001-zong-he-lian-xi.md)
-  * 八、综合练习二
+  * [八、综合练习二](di-san-zhang/ba-3001-zong-he-lian-xi-er.md)
 
