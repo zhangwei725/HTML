@@ -9,6 +9,7 @@
   * [四、HTML列表](di-er-zhang/si-3001-lie-biao-biao-qian.md)
   * [五、HTML 表格](di-er-zhang/wu-3001-html-biao-ge.md)
   * [六、HTML 表单](di-er-zhang/liu-3001-html-biao-dan.md)
+  * [七、HTML 多媒体](di-er-zhang/qi-3001-html-duo-mei-ti.md)
 * [第三章](di-san-zhang.md)
   * [七、综合练习一](di-san-zhang/qi-3001-zong-he-lian-xi.md)
   * [八、综合练习二](di-san-zhang/ba-3001-zong-he-lian-xi-er.md)
