@@ -75,28 +75,52 @@
      ```html
      <table bgcolor="black" cellspacing="1px" width="800px" align="center">
          <caption>
-             <h2>今日小说排行榜</h2>
+             <h2>游戏排行榜</h2>
          </caption>
          <tr bgcolor="#a9a9a9">
              <th>排名</th>
-             <th>关键词</th>
-             <th>趋势</th>
-             <th>今日搜索</th>
-             <th>最近七日</th>
+             <th>游戏</th>
+             <th>票数</th>
+             <th>图片</th>
              <th>相关链接</th>
          </tr>
          <tr bgcolor="white" align="center">
              <td>1</td>
-             <td align="left">暴走大事件</td>
+             <td>LOL</td>
+             <td>26561</td>
              <td>
-                 <img src="images/up.jpg">
+                 <img src="img/lol.jpg" width="100">
              </td>
-             <td>623557</td>
-             <td>4088311</td>
              <td>
-                 <a href="#">贴吧</a>
-                 <a href="#">图片</a>
-                 <a href="#">百科</a>
+                 <a href="#">资料</a>
+                 <a href="#">评测</a>
+                 <a href="#">礼包</a>
+             </td>
+         </tr>
+         <tr bgcolor="white" align="center">
+             <td>2</td>
+             <td>DOTA2</td>
+             <td>20000</td>
+             <td>
+                 <img src="img/dota2.jpg"  width="100">
+             </td>
+             <td>
+                 <a href="#">资料</a>
+                 <a href="#">评测</a>
+                 <a href="#">礼包</a>
+             </td>
+         </tr>
+         <tr bgcolor="white" align="center">
+             <td>3</td>
+             <td>WOW</td>
+             <td>18065</td>
+             <td>
+                 <img src="img/wow.jpg" width="100">
+             </td>
+             <td>
+                 <a href="#">资料</a>
+                 <a href="#">评测</a>
+                 <a href="#">礼包</a>
              </td>
          </tr>
      </table>
@@ -105,6 +129,8 @@
 ## 4 、表格的复杂应用
 
 #### 4.1、表格的结构
+
+​	开发中经常需要动态的修改单元格中的某一部分内容,如果设置了<tbody>,我们就可以配合AJAX去动态的更新表格的内容
 
 1. thead标签:用来存放当前列的表头，如果没有加css页面默认将表头中的高度设置变小
 
@@ -148,7 +174,7 @@
    - 说明：把当前单元格当做两个单元格来看待
 2. 纵向合并
    - rowspan:合并当前列的哪几个单元格，注意rowspan只会向后合并，不会向前合并。
-   - 例如：/<td rowspan="2"></td>
+   - 例如：<td rowspan="2"></td>
    - 说明：把当前单元格当做两个单元格来看待
 
 ## 5、案例
@@ -157,9 +183,59 @@
 
    ![](http://opzv089nq.bkt.clouddn.com/17-8-14/77975409.jpg)
 
+   ```html
+   <table width="1000" style="text-align: center; " bgcolor="#e9967a" border="1" cellpadding="10" cellspacing="0">
+       <tr>
+           <th colspan="3">日期</th>
+           <th colspan="2">天气现象</th>
+           <th>气温</th>
+           <th>风向</th>
+           <th>风力</th>
+       </tr>
+       <tr>
+           <td rowspan="2" colspan="2">22日 星期五</td>
+           <td>白天</td>
+           <td><img src="img/weathy_01.png"></td>
+           <td>晴间多云</td>
+           <td>高温 7C</td>
+           <td>无持续风向</td>
+           <td>微风</td>
+       </tr>
+       <tr>
+           <td>夜间</td>
+           <td><img src="img/weathy_01.png"></td>
+           <td>晴间多云</td>
+           <td>低温 -4C</td>
+           <td>无持续风向</td>
+           <td>微风</td>
+       </tr>
+
+       <tr>
+           <td rowspan="2" colspan="2" style="margin-top: 10px"> 23日 星期六</td>
+           <td>白天</td>
+           <td><img src="img/weathy_01.png"></td>
+           <td>晴间多云</td>
+           <td>高温 7C</td>
+           <td>无持续风向</td>
+           <td>微风</td>
+       </tr>
+
+       <tr>
+           <td>夜间</td>
+           <td><img src="img/weathy_01.png"></td>
+           <td>晴间多云</td>
+           <td>低温 -4C</td>
+           <td>无持续风向</td>
+           <td>微风</td>
+       </tr>
+   </table>
+   ```
+
 2. 精品课堂
 
    ![](http://opzv089nq.bkt.clouddn.com/17-8-14/61008956.jpg)
+
+   ​
 
 3. 注册界面
 
@@ -167,4 +243,4 @@
 
 4. 购物车
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-8-14/88694923.jpg)/
+   ![](http://opzv089nq.bkt.clouddn.com/17-8-14/88694923.jpg)
