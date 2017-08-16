@@ -287,7 +287,7 @@
     <option value="landrover">路虎</option>
     <option value="maserati">玛莎拉蒂</option>
     <option value="bentley">宾利</option>
- 	<option value="lamborghini">兰博基尼</option>
+    <option value="lamborghini">兰博基尼</option>
 </select>
 请输入你的车型: <input type="text" list="cars">
 ```
