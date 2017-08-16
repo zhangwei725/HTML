@@ -159,9 +159,9 @@
 3. 示例
 
    ```html
-   篮球<input type="checkbox" name="a">
-   足球<input type="checkbox" name="a">
-   皮球<input type="checkbox" name="a">
+   篮球<input type="checkbox" name="a" value="1">
+   足球<input type="checkbox" name="a" value="2">
+   皮球<input type="checkbox" name="a" value="">
    排球<input type="checkbox" name="a">
    铅球<input type="checkbox" name="a">
    ```
